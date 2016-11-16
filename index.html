@@ -1,7 +1,38 @@
 <DOCTYPE html>
     <html>
     <head>
- 
+<script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+        <script type="text/javascript">
+    $(document).ready(function(){
+
+    $(".navbar").hide(); //Hide the navigation bar first
+
+    $(window).scroll(function () {  //Listen for the window's scroll event
+        if (isScrolledAfterElement("#Page3")) { //if it has scrolled beyond the #content elment
+            $('.navbar').fadeIn();  //Show the navigation bar
+        } else {
+            $('.navbar').fadeOut(); //Else hide it
+        }
+    });
+
+    //Function that returns true if the window has scrolled beyond the given element
+    function isScrolledAfterElement(elem) {
+        var $elem = $(elem);
+        var $window = $(window);
+
+        var docViewTop = $window.scrollTop(); 
+        var docViewBottom = docViewTop + $window.height();
+        console.log("DocviewTop: ",docViewTop);
+        console.log("DocviewBottom: ", docViewBottom);
+        console.log("elemTop: ", elemTop);
+
+        var elemTop = $elem.offset().top;
+        console.log(elemTop <= docViewBottom);
+        return elemTop <= docViewBottom;
+    }
+});    
+    </script>
+        
     <style>
         html{
             min-height: 100%; 
@@ -12,47 +43,42 @@
             top: auto;
             
         }
-        ul{
+        nav ul{
             list-style-type: none;
+            font-family: Century Gothic;
             padding:0;
             top: 0;
             width: 100%;
             background-color: transparent;
-            overflow:hidden;
             position: fixed;
-            border-bottom: none;
-            border-bottom-color: none;
-            font-family: Century Gothic;
         }
-        li{
-            float:left;
-        }
-        li a{
+        .logo a {
+                float:left; 
+                color: black;
+                font-size: 20px;
+                margin-left: 35px;
+                text-decoration: none;}
+        nav li a{
             float:right;
             list-style-type: none;
             display:block;
             color:#000;
             padding: 8px 15px 8px 15px;
             margin-right: 20px;
-            background-color:;
             text-decoration: none;
-            text-align:center;
             font-size: 16px;
         }
-        li:last-child {
-            border-bottom:none;
-        }
+
         li a:hover{
             background-color:#888; 
             color: white;
         }        
-        .nav-fixer{
-        }
+
         .landing{
             display:table;
             width: 100%;
             top: auto;
-            background-image:url("bubbles2.jpg");
+            background-image:url("img/bubbles2.jpg");
             color:white;
             background-size: cover;
             background-color: black;
@@ -108,7 +134,7 @@
             display:table;
             height:100%;
             width: 100%;
-            background-image:url("winter_wall.jpg");
+            background-image:url("img/winter_wall.jpg");
             color:white;
             background-size: 700px;
             background-repeat:no-repeat;
@@ -118,45 +144,54 @@
             border:1px dashed;
             border-color:black;
         }
-        
-        .PageContent{
-            
+        #Page2 {
         }
+        #Page3 {
+        }
+        .burger{
+            display:none;
+            font-size:30px;
+        }
+        
+        @media screen and (max-width:630px){
+            
+            nav ul li a{display:none;}
+            nav .burger {display:block;}
+            nav:hover ul{display:block;}
+            .logo {display:none;}
+            .landingname {
+                margin-top: 80px;
+                float:left;
+                margin-left: 150px;}
+        }
+        
+        .navbar { 
+        }
+        
     </style>    
     </head>
     <body>
-        <nav class="nav-fixer">
-        <ul class="">
-            <li><a class="active" style="float:left" href=#>Jimmy Cheong</a></li>
-            <li style="float:right">
-                <a href=#>Contact</a>
-                <a href=#>Background</a>
-                <a href=#>About Me</a>
-            </li>
-        </ul>
+        <nav class="navbar">
+            <ul>
+            <span class = "Logo"><a href=#>Jimmy Cheong</a></span>
+                <li><a href=#>Contact</a></li>
+                <li><a href=#>Background</a></li>
+                <li><a href=#>About Me</a></li>
+                <li><a href="javascript:void(0);" class="burger" onclick="myFunction()">☰</a></li>
+            </ul>
         </nav>        
         <div class="">
         <div class="landing">
-        <nav class="nav-fixer">
-        <ul class="">
-            <li><a class="active" style="float:left" href=#>Jimmy Cheong</a></li>
-            <li style="float:right">
-                <a href=#>Contact</a>
-                <a href=#>Background</a>
-                <a href=#>About Me</a>
-            </li>
-        </ul>
-        </nav>
         <p class="Landingname">JIMMY CHEONG</p>
             </div>
-        <div class="Page2">
+        <div class="Page2" id="Page2">
             <div class="padded border_text">
                 <p><bold>What is Lorem Ipsum?
 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. </bold>
                 </p>
             </div>
         </div>
-        <div class="Page3">
+        <div id="Page3" class="Page3">
             <p></p>
         </div>
         <div class="Page4" style="">
@@ -174,6 +209,8 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
           
             
         </div>
+        
+
     </body>
     </html>
 </DOCTYPE>
