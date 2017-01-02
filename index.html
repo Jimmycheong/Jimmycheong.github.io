@@ -41,6 +41,7 @@
         body {
             margin: 0 auto;
             top: auto;
+            font-family:Century Gothic;
             
         }
         nav ul{
@@ -108,53 +109,109 @@
         }
         .Page4 {
             display:table;
-            height: 200%;
+            height: 120%;
             width: 100%;
             background-color: white;
             color:black;
             background-size: cover;
-            background-color: white;
             border:1px dashed;
             border-color:black;
+            font-family: Century Gothic;
         }
+        
+        .Page5 {
+            display:table;
+            height: 120%;
+            width: 100%;
+            background-color: black;
+            background-size: cover;
+            border:1px dashed;
+            border-color:black;
+            font-family: Century Gothic;
+            color: white;
+        }  
+
+        .Page6 {
+            display:table;
+            height: 90%;
+            width: 100%;
+            background-color: #FFA500;
+            background-size: cover;
+            border:1px dashed;
+            border-color:black;
+            font-family: Century Gothic;
+            color: white;
+        }
+        
         .Page4head {
             text-align: left;
             padding-left: 10%; 
             padding-top: 5%;
         }
         
-        .jsafedes{
-            display: inline-block;
-            height: 100%;
-            width: 45%;
-            padding: 10px 10px;
-            border: 3px dashed;
-        }
-        .jsafedescp{
-            margin: 20px 20px;
-            border: 1px solid;
-            padding: 1px dashed;
+        .jsafelogo{
+            background-repeat:no-repeat;
+            background-size:cover;
+            width:100%;
         }
         
-        .jsafemidsection{
-            border: 2px dashed;
+        .logosizer{
+            height: 200px;
         }
-                
-        .jsafebox{
-            display: inline-block;
-            width:35%;
-            border: 1px solid;
+        
+        .container{
+            font-size: 13px;
         }
+
+        .jauth{
+            padding-left: 0px;
+            padding-right:0px;
+        }
+        
+        .page4row{
+            margin: 10px 10px;
+        }
+        .jsafedes{
+            margin-top: 10px;
+            width: 100%;
+            height: 300px;
+            padding 10px 5px;
+            padding-top: 30px;
+
+        }
+        .jsafedes2{
+            margin-top: 40px;
+            margin-bottom: 30px;
+            margin-right: 40px;
+            width: 100%;
+            height: 300px;
+            padding-top: 30px;
+        }
+                        
         .jsafepic{
             width: 100%;
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
-            margin;
+            margin-right: 10px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        .jauthi{
+            width: 100%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            margin-top: 40px;
+            margin-bottom: 30px;
         }
 
-        
-        
+        .jimappi{
+            width: 100%;
+            background-size:cover;
+            background-position: center;
+            padding: 20px 70px;
+        }
         .padded {
             padding: 30px 100px;
             text-align: justify;
@@ -206,7 +263,8 @@
         .navbar { 
         }
         
-    </style>    
+    </style>  
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     </head>
     <body>
         <nav class="navbar">
@@ -229,37 +287,111 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
                 </p>
             </div>
         </div>
-        <div id="Page3" class="Page3">
-            <img src="https://www.codewars.com/users/jimmycheong/badges/large">
-        </div>
         <div class="Page4" style="">
             <div class = 'Page4head'>
             <h3>JSafe</h3>
             <p>Keep track of your passwords in a secure way</p>
             </div>
             
-            <div class = 'jsafemidsection'>
-                <div class="jsafedes">
-                <div class="jsafedescp">
-                    <p> Details: </p>
+            <div class='container'>
+                <div class = 'row page4row'>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                        <div class='jsafedes'>
+                        <p> Details: </p>
+                        <ul>
+                            <li>Written in Python3 </li>
+                            <li>Tkinter, Python GUI package </li>
+                            <li>Secures passwords using AES encryption and SHA256 hashing algorithm</li>
+                            <li>Stores encrypted passwords using SQLite database</li>
+                            <li>Connects to DB using SQLAlchemy ORM</li>
+                        </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                    <img src="img/jsafeo2.jpg" class='jsafepic'>          
+                    </div>
                 </div>
-                </div>
-                <div class="jsafebox">
-                <img src="img/jsafeo2.jpg" class='jsafepic'>          
+            </div>
+            <div class='container'>
+                <div class = 'row page4row'>
+                    <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7 jauth">
+                    <img src="img/auth.jpg" class='jauthi'>          
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
+                        <div class='jsafedes2'>
+                        <p> How does it work? </p>
+                        <ul>
+                            <li>User must log in using a master password</li>
+                            <li>The hash of the master password, along with a random initializaton vector, is used to encrypt all passwords. </li>
+                            <li>Passwords stored in database in binary form</li>
+                            <li>Even if database is compromised, ciphers cannot be decrypted without master password</li>
+                        </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-            <div class='Page5'>
-            
-<p><bold>What is Lorem Ipsum?
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. </bold></p>
+        <div class="Page5">
+            <div class = 'Page4head'>
+            <h3>Imapp</h3>
+            <p>Instant messaging desktop app</p>
             </div>
             
-<p><bold>What is Lorem Ipsum?
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. </bold></p>
-<p><bold>What is Lorem Ipsum?
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. </bold></p>
-          
+            <div>
+                <img src="img/jmapp.jpg" class='jimappi'>        
+            </div>
+    
+            <div class='container'>
+                <div class = 'row page4row'>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                        <div class='jsafedes'>
+                        <p> Details: </p>
+                        <ul>
+                            <li>Written in Python3 </li>
+                            <li>                    Tkinter, Python GUI package</li>
+                            <li>Multi-threading to send messages, receive messages and run GUI simultaneously</li>
+                            <li>Connections created using Socket module</li>
+                        </ul>    
+                        <br>
+                        <p>How does it work? </p>
+                        <ul>
+                            <li>Server listens for incoming connections</li>
+                            <li>Once client connects using GUI, connection created and client is registered.</li>
+                            <li>Client incoming messages served on new thread, which are then broadcasted to all connected clients</li>
+                            <li>Closes connection and thread once a client disconnects</li>
+                        </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="border: 1 dashed; border-color:#000000;">
+                    <img src="img/jmappl.jpg" class='jsafepic'>          
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="Page6">
+            <div class = 'Page4head'>
+            <h3>Calculator</h3>
+            <p>Basic day-to-day tool</p>
+            </div>
+    
+            <div class='container'>
+                <div class = 'row page4row'>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                        <div class='jsafedes'>
+                        <p> Details: </p>
+                        <ul>
+                            <li>My first app built using Tkinter!</li>
+                            <li>Written in Python3 </li>
+                            <li>                    Tkinter, Python GUI package</li>
+                        </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="border: 1 dashed; border-color:#000000;">
+                    <img src="img/calculator.jpg" class='jsafepic'>          
+                    </div>
+                </div>
+            </div>
+        </div>            
             
         </div>
         
