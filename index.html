@@ -2,13 +2,13 @@
     <html>
     <head>
 <script type="text/javascript" src="jquery-3.1.1.min.js"></script>
-        <script type="text/javascript">
+    <script type="text/javascript">
     $(document).ready(function(){
 
     $(".navbar").hide(); //Hide the navigation bar first
 
-    $(window).scroll(function () {  //Listen for the window's scroll event
-        if (isScrolledAfterElement("#Page3")) { //if it has scrolled beyond the #content elment
+    $(window).scroll(function() {  //Listen for the window's scroll event
+        if (isScrolledAfterElement("#landingName")) { //if it has scrolled beyond the #content elment
             $('.navbar').fadeIn();  //Show the navigation bar
         } else {
             $('.navbar').fadeOut(); //Else hide it
@@ -17,18 +17,15 @@
 
     //Function that returns true if the window has scrolled beyond the given element
     function isScrolledAfterElement(elem) {
-        var $elem = $(elem);
+        var $elem = $(elem)
         var $window = $(window);
-
-        var docViewTop = $window.scrollTop(); 
-        var docViewBottom = docViewTop + $window.height();
-        console.log("DocviewTop: ",docViewTop);
-        console.log("DocviewBottom: ", docViewBottom);
-        console.log("elemTop: ", elemTop);
-
         var elemTop = $elem.offset().top;
-        console.log(elemTop <= docViewBottom);
-        return elemTop <= docViewBottom;
+        var docViewTop = $window.scrollTop();
+        console.log('Element is : ', $elem)
+        console.log('elemTop: ',elemTop)
+        console.log('docViewTop: ', docViewTop)
+        console.log('Current state: ', elemTop <= docViewTop)
+        return elemTop <= docViewTop; 
     }
 });    
     </script>
@@ -282,8 +279,8 @@
         }
         
         .navbar { 
-        }
-        
+
+        } 
     </style>  
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
@@ -297,10 +294,11 @@
                 <li><a href=#>About Me</a></li>
                 <li><a href="javascript:void(0);" class="burger" onclick="myFunction()">☰</a></li>
             </ul>
-        </nav>        
+        </nav>
+    
         <div class="">
         <div class="landing">
-        <p class="Landingname">JIMMY CHEONG</p>
+        <p class="Landingname" id='landingName'>JIMMY CHEONG</p>
             </div>
             
         <!-- Page 2 -->
@@ -309,10 +307,10 @@
                 <h3 class='w3-center'> About Me </h3>
                 <p class='w3-center'> Multilingual. Programming enthusiast. </p>
                 <br>
-                <p class='summary'>Graduated from Queen Mary University of London with a 1st Class Honours degree in mechanical engineering in 2014. Lived abroad in China for 2 years, learning Mandarin Chinese, interning at a global engineering company, and tutoring local students. Based in London, UK. Currently looking for </p>
+                <p class='summary'>Graduated from Queen Mary University of London with a 1st Class Honours degree in mechanical engineering in 2014. Lived abroad in China for 2 years, learning Mandarin Chinese, interning at a global engineering company, and tutoring local students. Based in London, UK. Currently looking for pursue career in technology.</p>
                 </div>
                 <div class='page2body'>
-                <div class='col-md-5 col-sm-5 col-xs-5 '> 
+                <div class='col-md-5 col-sm-5 col-xs-5' style='margin-left:30px;'> 
                 <img src="img/profile.jpg" class="profilepic">
                 </div>
                 <div class='col-md-6 col-sm-6 col-xs-6 page2interest'>
@@ -332,7 +330,7 @@
         </div>
             
         <!-- Page 4 -->     
-        <div class="Page4" style="">
+        <div class="Page4" style="" id="Page4">
             <div class = 'Page4head'>
             <h3>JSafe</h3>
             <p>Keep track of your passwords in a secure way</p>
