@@ -5,13 +5,13 @@
     <script type="text/javascript">
     $(document).ready(function(){
 
-    $(".navbar").hide(); //Hide the navigation bar first
-
     $(window).scroll(function() {  //Listen for the window's scroll event
         if (isScrolledAfterElement("#landingName")) { //if it has scrolled beyond the #content elment
-            $('.navbar').fadeIn();  //Show the navigation bar
+            $('nav ul').css({"background-color": "white"});
+            $('nav ul a').css("color", "Black");//Show the navigation bar
         } else {
-            $('.navbar').fadeOut(); //Else hide it
+            $('nav ul').css({"background-color": "transparent"});
+            $('nav ul a').css("color", "transparent"); //Else hide it
         }
     });
 
@@ -25,7 +25,7 @@
         console.log('elemTop: ',elemTop)
         console.log('docViewTop: ', docViewTop)
         console.log('Current state: ', elemTop <= docViewTop)
-        return elemTop <= docViewTop; 
+        return 150 <= docViewTop; 
     }
 });    
     </script>
@@ -52,7 +52,7 @@
         }
         .logo a {
                 float:left; 
-                color: black;
+                color: transparent;
                 font-size: 20px;
                 margin-left: 35px;
                 text-decoration: none;}
@@ -60,7 +60,7 @@
             float:right;
             list-style-type: none;
             display:block;
-            color:#000;
+            color: transparent;
             padding: 8px 15px 8px 15px;
             margin-right: 20px;
             text-decoration: none;
@@ -278,15 +278,21 @@
                 margin-left: 150px;}
         }
         
-        .navbar { 
-
+        .navbar{
+            background-color:transparent;
+            margin-bottom: 0px;
+            min-height: 0px;
+        }
+        
+        .mainscreen { 
+            top:0;
         } 
     </style>  
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
     </head>
     <body>
-        <nav class="navbar">
+        <nav class="navbar" id="navbar" style="margin-bottom:0px; min-height:0px; top:0;border: 0px;">
             <ul>
             <span class = "Logo"><a href=#>Jimmy Cheong</a></span>
                 <li><a href=#>Contact</a></li>
@@ -296,7 +302,7 @@
             </ul>
         </nav>
     
-        <div class="">
+        <div class="mainscreen">
         <div class="landing">
         <p class="Landingname" id='landingName'>JIMMY CHEONG</p>
             </div>
