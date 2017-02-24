@@ -1,0 +1,293 @@
+html{
+    min-height: 100%; 
+    min-width: 100%; 
+}
+body {
+    margin: 0 auto;
+    top: auto;
+    font-family:Century Gothic; 
+}
+
+nav ul{
+    list-style-type: none;
+    font-family: Century Gothic;
+    padding:0;
+    top: 0;
+    width: 100%;
+    background-color: transparent;
+    position: fixed;
+    z-index:1;
+}
+.logo a {
+        float:left; 
+        color: transparent;
+        font-size: 20px;
+        margin-left: 35px;
+        text-decoration: none;}
+nav li a{
+    float:right;
+    list-style-type: none;
+    display:block;
+    color: transparent;
+    padding: 8px 15px 8px 15px;
+    margin-right: 20px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+li a:hover{
+    background-color:#888; 
+    color: white;
+}        
+
+.landing{
+    display:table;
+    width: 100%;
+    top: auto;
+    background-image:url("img/bubbles2.jpg");
+    color:white;
+    background-size: cover;
+    background-color: black;
+    min-height:100%;
+}
+.landingname {
+    color: black;
+    float:right;
+    margin-right: 100px;
+    margin-top: 150px;
+    font-size: 30px;
+    font-weight: 300;
+    font-family: Century Gothic;
+
+}
+.Page2 {
+    display:table;
+    height: 90%;
+    width: 100%;
+    background-color: white;
+    color:black;
+    background-size: cover;
+    background-color: white;
+    border-color:black;
+    font-family: Century Gothic;
+}
+
+.padded {
+    border: 2px dashed;
+}
+
+.Abouts{
+    text-align:center;
+}
+
+.page2head{
+    margin-top:30px;
+    font-size: 14px;
+    font-family: Century Gothic;
+    padding:40px;
+}
+
+.page2body{
+    margin: 10px 10px;
+    height: 50%;
+}
+
+.summary{
+    text-align:justify;
+    padding: 0px 50px;
+}
+
+.profilepic{
+    height: 250px;
+    width: 250px;
+    margin-top: 30px;
+    margin-left: 50px;
+    float:right;
+}
+
+.page2interest{
+    margin-top: 30px;
+    margin-left: 30px;
+    float:left;
+}
+
+.Page4 {
+    display:table;
+    height: 120%;
+    width: 100%;
+    background-color: black;
+    color:white;
+    background-size: cover;
+    font-family: Century Gothic;
+}
+
+.Page5 {
+    display:table;
+    height: 120%;
+    width: 100%;
+    background-color: white;
+    background-size: cover;
+    font-family: Century Gothic;
+    color: black;
+}  
+
+.Page6 {
+    display:table;
+    height: 90%;
+    width: 100%;
+    background-color: #FFA500;
+    background-size: cover;
+    font-family: Century Gothic;
+    color: white;
+}
+
+
+.Page7 {
+
+    height: 500px;
+
+}
+
+
+
+.Page4head {
+    text-align: left;
+    padding-left: 10%; 
+    padding-top: 5%;
+
+}
+
+.jsafelogo{
+    background-repeat:no-repeat;
+    background-size:cover;
+    width:100%;
+}
+
+.logosizer{
+    height: 200px;
+}
+
+.container{
+    font-size: 13px;
+}
+
+.jauth{
+    padding-left: 0px;
+    padding-right:0px;
+}
+
+.page4row{
+    margin: 10px 10px;
+}
+.jsafedes{
+    margin-top: 10px;
+    width: 100%;
+    height: 300px;
+    padding 10px 5px;
+    padding-top: 30px;
+    font-size: 15px;
+}
+
+.jsafedes2{
+    margin-top: 40px;
+    margin-bottom: 30px;
+    margin-right: 40px;
+    width: 100%;
+    height: 300px;
+    padding-top: 30px;
+    font-size: 15px;
+
+}
+
+.jsafepic{
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    position:relative;
+}
+.jauthi{
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+.jimappi{
+    width: 100%;
+    background-size:cover;
+    background-position: center;
+    padding: 20px 70px;
+}
+
+
+.Page3 {
+    display:table;
+    height:100%;
+    width: 100%;
+    background-image:url("img/winter_wall.jpg");
+    color:white;
+    background-size: 700px;
+    background-repeat:no-repeat;
+    background-color: white;
+    float:left;
+    min-height:100%;
+    border:1px dashed;
+    border-color:black;
+}
+#Page2 {
+}
+#Page3 {
+}        
+#Page4 {
+}
+.burger{
+    display:none;
+    font-size:30px;
+}
+
+@media screen and (max-width:630px){
+
+    nav ul li a{display:none;}
+    nav .burger {display:block;}
+    nav:hover ul{display:block;}
+    .logo {display:none;}
+    .landingname {
+        margin-top: 80px;
+        float:left;
+        margin-left: 150px;}
+    .jsafedes {font-size: 12px};
+}
+
+.navbar{
+    background-color:transparent;
+    margin-bottom: 0px;
+    min-height: 0px;
+}
+
+.navbar-brand{
+    padding:0;
+    z-index: 2;
+}
+
+.mainscreen { 
+    top:0;
+} 
+
+
+
+/*    Contact Page styles*/
+
+.contactForm {
+    
+    text-align: center;
+    width:600px;
+}
+
+
+
